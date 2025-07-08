@@ -15,8 +15,9 @@ export default async function handler(req, res) {
     const client = await clientPromise;
     const db = client.db("resume_db");
     const collection = db.collection("resumes");
-    const result = await collection.insertOne(data);
-    res.status(200).json({ message: "Saved!", id: result.insertedId });
+  const result = await collection.insertOne(data);
+  res.status(200).json({ message: "Saved!", id: result.insertedId });
+
   } catch (error) {
     console.error("SAVE ERROR:", error);
     res.status(500).json({ message: "Could not save data" });

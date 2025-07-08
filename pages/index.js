@@ -42,13 +42,10 @@ export default function Home() {
       body: JSON.stringify(formData),
     });
 
-    // Error safeguard: if response is not JSON
-    const contentType = res.headers.get("content-type");
-    if (!contentType || !contentType.includes("application/json")) {
-      throw new Error("Invalid response format");
-    }
+    const text = await res.text();
+    console.log("Raw Response: ", text);
 
-    const payload = await res.json();
+    const payload = JSON.parse(text); // Manually parse to catch formatting errors
 
     if (!res.ok) throw new Error(payload.message);
     alert("Saved to MongoDB! ID: " + payload.id);
