@@ -17,8 +17,8 @@ A simple and elegant resume generator built using **Next.js**, **React**, **Tail
 
 ## 🚀 Live Demo
 
-🔗 [View Live App](https://your-vercel-url.vercel.app)  
-_Replace above link with your deployed Vercel app link._
+🔗 [View Live App](https://resume-generator-gigq.vercel.app/)  
+
 
 ---
 
