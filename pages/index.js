@@ -41,7 +41,15 @@ export default function Home() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
+
+    // Error safeguard: if response is not JSON
+    const contentType = res.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new Error("Invalid response format");
+    }
+
     const payload = await res.json();
+
     if (!res.ok) throw new Error(payload.message);
     alert("Saved to MongoDB! ID: " + payload.id);
   } catch (err) {
@@ -49,6 +57,7 @@ export default function Home() {
     alert("Error saving: " + err.message);
   }
 };
+
 
 
   return (
