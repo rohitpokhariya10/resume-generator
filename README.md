@@ -1,51 +1,74 @@
+# 📝 Resume Generator Web App
 
-# 🚀 Resume Generator
-
-
-This is a **Resume Generator** built with Next.js, Tailwind CSS, and MongoDB.
-
-✅ Generate resume previews  
-✅ Download resume as PDF  
-✅ Save data to MongoDB  
-✅ Modern clean design  
+A simple and elegant resume generator built using **Next.js**, **React**, **Tailwind CSS**, and **MongoDB Atlas**. Users can fill a form, preview their resume, download it as a PDF, and also save it securely to a MongoDB database.
 
 ---
 
-## ⚙️ Getting Started
+## 🔧 Tech Stack
 
-1️⃣ **Clone the repo**  
+- **Next.js** (App Framework)
+- **React** (Frontend)
+- **Tailwind CSS** (Styling)
+- **MongoDB Atlas** (Cloud Database)
+- **html2pdf.js** (PDF Export)
+- **Vercel** (Deployment)
 
-```bash
-git clone https://github.com/rohitpokhariya10/resume-generator.git
+---
+
+## 🚀 Live Demo
+
+🔗 [View Live App](https://your-vercel-url.vercel.app)  
+_Replace above link with your deployed Vercel app link._
+
+---
+
+## 📦 Features
+
+- Fill form with personal details
+- Select resume template
+- Preview resume instantly
+- Download resume as PDF
+- Save resume data to MongoDB database
+
+---
+
+## 📂 Project Structure
+
+resume-generator/
+├── pages/
+│ ├── index.js # Main form and resume preview
+│ └── api/saveResume.js # API route to store data in MongoDB
+├── lib/
+│ └── mongodb.js # MongoDB connection logic
+├── styles/
+│ └── globals.css # Tailwind CSS
+├── public/
+│ └── ... # Assets & icons
+└── .env.local # MongoDB URI (not pushed to GitHub)
+
+🛠️ How to Run Locally
+bash
+Copy
+Edit
+git clone https://github.com/your-username/resume-generator.git
 cd resume-generator
-2️⃣ Install dependencies
-
-bash
-Copy
-Edit
 npm install
-3️⃣ Set up MongoDB
-
-Install MongoDB locally or use Atlas
-
-add in .env.local:
-
-ini
-Copy
-Edit
-MONGODB_URI=mongodb://127.0.0.1:27017/resume_db
-4️⃣ Run the app
-
-bash
-Copy
-Edit
 npm run dev
-Visit http://localhost:3000 to use it.
-           ----Features----
-Dynamic live resume preview
+Open http://localhost:3000
 
-Download as PDF using html2pdf.js
+☁️ Deploying to Vercel
+Push this code to a GitHub repo
 
-Multiple templates
+Go to https://vercel.com
 
-Saves resume data to MongoDB
+Click New Project → Import GitHub repo
+
+Set MONGODB_URI in Environment Variables
+
+Click Deploy
+
+🙋‍♂️ Author
+Rohit Pokhariya
+B.Tech CSE | Resume Web App Creator
+GitHub
+
